@@ -2,7 +2,6 @@ package colors
 
 import (
 	"fmt"
-	"runtime"
 )
 
 var reset = "\033[0m"
@@ -15,55 +14,41 @@ var cyan = "\033[36m"
 var gray = "\033[37m"
 var white = "\033[97m"
 
-func init() {
-	if runtime.GOOS == "windows" {
-		reset = ""
-		red = ""
-		green = ""
-		yellow = ""
-		blue = ""
-		purple = ""
-		cyan = ""
-		gray = ""
-		white = ""
-	}
+func AsRed(text ...interface{}) string {
+	return fmt.Sprint(red, text, reset)
 }
 
-func AsRed(text string) string {
-	return fmt.Sprintf("%s%s%s", red, text, reset)
-}
-
-func AsGreen(text string) string {
-	return fmt.Sprintf("%s%s%s", green, text, reset)
+func AsGreen(text ...interface{}) string {
+	return fmt.Sprint(green, text, reset)
 
 }
 
-func AsYellow(text string) string {
-	return fmt.Sprintf("%s%s%s", yellow, text, reset)
+func AsYellow(text ...interface{}) string {
+	return fmt.Sprint(yellow, text, reset)
 
 }
 
-func AsBlue(text string) string {
-	return fmt.Sprintf("%s%s%s", blue, text, reset)
+func AsBlue(text ...interface{}) string {
+	return fmt.Sprint(blue, text, reset)
 
 }
 
-func AsPurple(text string) string {
-	return fmt.Sprintf("%s%s%s", purple, text, reset)
+func AsPurple(text ...interface{}) string {
+	return fmt.Sprint(purple, text, reset)
 
 }
 
-func AsCyan(text string) string {
-	return fmt.Sprintf("%s%s%s", cyan, text, reset)
+func AsCyan(text ...interface{}) string {
+	return fmt.Sprint(cyan, text, reset)
 
 }
 
-func AsGray(text string) string {
-	return fmt.Sprintf("%s%s%s", gray, text, reset)
+func AsGray(text ...interface{}) string {
+	return fmt.Sprint(gray, text, reset)
 
 }
 
-func AsWhite(text string) string {
-	return fmt.Sprintf("%s%s%s", white, text, reset)
+func AsWhite(text ...interface{}) string {
+	return fmt.Sprint(white, text, reset)
 
 }
