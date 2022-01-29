@@ -17,32 +17,46 @@ import (
 // 	dark_white  = "97m"
 // )
 
-
 type Format string
 
 const (
-	Black        Format = "30m"
-	DarkRed      Format = "31m"
-	DarkGreen    Format = "32m"
-	DarkYellow   Format = "33m"
-	DarkBlue     Format = "34m"
-	DarkMagenta  Format = "35m"
-	DarkCyan     Format = "36m"
-	LightGray    Format = "37m"
-	DarkGray     Format = "90m"
-	LightRed     Format = "91m"
-	LightGreen   Format = "92m"
-	LightYellow  Format = "93m"
-	LightBlue    Format = "94m"
-	LightMagenta Format = "95m"
-	LightCyan    Format = "96m"
-	White        Format = "97m"
+	Black        Format = "30"
+	DarkRed      Format = "31"
+	DarkGreen    Format = "32"
+	DarkYellow   Format = "33"
+	DarkBlue     Format = "34"
+	DarkMagenta  Format = "35"
+	DarkCyan     Format = "36"
+	LightGray    Format = "37"
+	DarkGray     Format = "90"
+	LightRed     Format = "91"
+	LightGreen   Format = "92"
+	LightYellow  Format = "93"
+	LightBlue    Format = "94"
+	LightMagenta Format = "95"
+	LightCyan    Format = "96"
+	White        Format = "97"
+	// Background
+	BgBlack        Format = "40"
+	BgDarkRed      Format = "41"
+	BgDarkGreen    Format = "42"
+	BgDarkYellow   Format = "43"
+	BgDarkBlue     Format = "44"
+	BgDarkCyan     Format = "46"
+	BgLightGray    Format = "100"
+	BgLightRed     Format = "101"
+	BgLightGreen   Format = "102"
+	BgLightYellow  Format = "103"
+	BgLightBlue    Format = "104"
+	BgLightMagenta Format = "105"
+	BgLightCyan    Format = "106"
+	BgWhite        Format = "107"
 	// Format
-	Bold         Format = "1m"
-	Underline    Format = "4m"
-	NoUnderline  Format = "24m"
-	ReverseText  Format = "7m"
-	PositiveText Format = "27m"
+	Bold         Format = "1"
+	Underline    Format = "4"
+	NoUnderline  Format = "24"
+	// ReverseText  Format = "7"
+	PositiveText Format = "27"
 	reset        Format = "\033[0m"
 )
 
@@ -54,12 +68,14 @@ func As(text interface{}, options ...interface{}) string {
 			formats = append(formats, d)
 		}
 	}
-	t := "\033["
-	for _, f := range formats {
-		t += fmt.Sprint(f, ";")
+	t := ""
+	for i, f := range formats {
+		t += fmt.Sprintf("%v", f)
+		if i != len(formats)-1 {
+			t += ";"
+		}
 	}
-	t += "m"
-	return fmt.Sprint(t, text, reset)
+	return fmt.Sprintf("\033[%sm%v%v", t, text, reset)
 }
 
 // func AsRed(text ...interface{}) string {
