@@ -47,7 +47,7 @@ const (
 	PositiveText Format = "27"
 	reset        Format = "\033[0m"
 )
-
+// As takes an output to return and any modifiers of the Format type
 func As(text interface{}, options ...interface{}) string {
 	formats := make([]Format, 0)
 	for _, option := range options {
