@@ -11,4 +11,3 @@ A Go library inspired by chalk.js
 * gray
 * white
 
-### **Only works on Linux/Mac/BSD right now*
