@@ -4,18 +4,6 @@ import (
 	"fmt"
 )
 
-// var (
-// 	reset       = "0m"
-// 	black       = "30m"
-// 	dark_red    = "31m"
-// 	dark_green  = "32m"
-// 	dark_yellow = "33m"
-// 	dark_blue   = "34m"
-// 	dark_magenta = "35m"
-// 	dark_cyan   = "36m"
-// 	dark_gray   = "37m"
-// 	dark_white  = "97m"
-// )
 
 type Format string
 
