@@ -1,6 +1,9 @@
 # colors
 A Go library inspired by chalk.js
 
+## About
+Colors lets you print to the console using standard ASCII color codes. Codes can be combined and mixed to create almost any legal combination of color codes on *nix/Windows/Mac OS (untested). 
+
 ## Print in these pretty colors
 * Black        
 * DarkRed 
@@ -18,7 +21,7 @@ A Go library inspired by chalk.js
 * LightMagenta 
 * LightCyan 
 * White 
-* //
+* ### Background
 * BgBlack 
 * BgDarkRed 
 * BgDarkGreen 
@@ -33,10 +36,9 @@ A Go library inspired by chalk.js
 * BgLightMagenta 
 * BgLightCyan 
 * BgWhite 
-* //
+* ### Style
 * Bold 
 * Underline 
 * NoUnderline 
-* // Format  
+* ## Orientation
 * PositiveText 
-* reset 
