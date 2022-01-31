@@ -21,7 +21,7 @@ Colors lets you print to the console using standard ANSI color codes. Codes can 
 * LightMagenta 
 * LightCyan 
 * White 
-* ### Background
+### Background
 * BgBlack 
 * BgDarkRed 
 * BgDarkGreen 
@@ -40,5 +40,5 @@ Colors lets you print to the console using standard ANSI color codes. Codes can 
 * Bold 
 * Underline 
 * NoUnderline 
-* ## Orientation
+## Orientation
 * PositiveText 
