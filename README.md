@@ -36,9 +36,9 @@ Colors lets you print to the console using standard ANSI color codes. Codes can 
 * BgLightMagenta 
 * BgLightCyan 
 * BgWhite 
-* ### Style
+### Style
 * Bold 
 * Underline 
 * NoUnderline 
-## Orientation
+### Orientation
 * PositiveText 
