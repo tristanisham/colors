@@ -2,7 +2,7 @@
 A Go library inspired by chalk.js
 
 ## About
-Colors lets you print to the console using standard ASCII color codes. Codes can be combined and mixed to create almost any legal combination of color codes on *nix/Windows/Mac OS (untested). 
+Colors lets you print to the console using standard ANSI color codes. Codes can be combined and mixed to create almost any legal combination of color codes on *nix/Windows/Mac OS (untested). 
 
 ## Print in these pretty colors
 * Black        
